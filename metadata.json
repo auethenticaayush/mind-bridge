@@ -1,0 +1,6 @@
+{
+  "name": "MindBridge - Campus Mental Wellness",
+  "description": "Confidential, anonymous mental health consultation and peer support platform for university students.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

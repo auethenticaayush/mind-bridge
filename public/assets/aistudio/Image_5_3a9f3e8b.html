@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>MindBridge - Mental Wellness</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'on-error': '#ffffff', 'outline': '#6f7a72', 'on-background': '#111c2d', 'on-surface-variant': '#3f4943', 'secondary-container': '#c8b3ff', 'background': '#f9f9ff', 'surface-dim': '#cfdaf2', 'error': '#ba1a1a', 'surface-container-high': '#dee8ff', 'inverse-surface': '#263143', 'tertiary-container': '#db1644', 'on-primary-fixed-variant': '#005236', 'surface-tint': '#176b4b', 'inverse-primary': '#88d6af', 'surface-bright': '#f9f9ff', 'outline-variant': '#bec9c1', 'on-secondary-fixed': '#210a50', 'error-container': '#ffdad6', 'on-secondary-container': '#544184', 'on-tertiary-fixed-variant': '#920028', 'on-error-container': '#93000a', 'primary-fixed-dim': '#88d6af', 'surface-container': '#e7eeff', 'surface-container-low': '#f0f3ff', 'on-surface': '#111c2d', 'on-tertiary-container': '#fff1f1', 'surface-variant': '#d8e3fb', 'on-primary-fixed': '#002113', 'on-secondary-fixed-variant': '#4d3b7e', 'primary': '#096444', 'tertiary-fixed': '#ffdada', 'tertiary-fixed-dim': '#ffb3b6', 'inverse-on-surface': '#ecf1ff', 'on-secondary': '#ffffff', 'on-primary-container': '#d0ffe3', 'on-tertiary-fixed': '#40000c', 'secondary-fixed-dim': '#cfbcff', 'secondary-fixed': '#e9ddff', 'primary-container': '#2e7d5b', 'secondary': '#665397', 'primary-fixed': '#a4f3ca', 'surface-container-highest': '#d8e3fb', 'on-tertiary': '#ffffff', 'tertiary': '#b10032', 'surface-container-lowest': '#ffffff', 'surface': '#f9f9ff', 'on-primary': '#ffffff' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'gutter': '1.5rem', 'margin': '1.5rem', 'space-md': '1rem', 'space-xl': '2.5rem', 'space-xs': '0.25rem', 'space-lg': '1.5rem', 'space-sm': '0.5rem' }, fontFamily: { 'label-lg': ['Inter'], 'body-sm': ['Inter'], 'label-sm': ['Inter'], 'title-md': ['Plus Jakarta Sans'], 'body-md': ['Inter'], 'headline-xl-mobile': ['Plus Jakarta Sans'], 'headline-lg': ['Plus Jakarta Sans'], 'headline-md': ['Plus Jakarta Sans'], 'headline-sm': ['Plus Jakarta Sans'], 'headline-xl': ['Plus Jakarta Sans'], 'label-md': ['Inter'], 'headline-lg-mobile': ['Plus Jakarta Sans'], 'body-lg': ['Inter'] }, fontSize: { 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }], 'body-sm': ['13px', { lineHeight: '20px', fontWeight: '400' }], 'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.03em', fontWeight: '600' }], 'title-md': ['18px', { lineHeight: '26px', fontWeight: '500' }], 'body-md': ['15px', { lineHeight: '24px', fontWeight: '400' }], 'headline-xl-mobile': ['30px', { lineHeight: '38px', letterSpacing: '-0.015em', fontWeight: '700' }], 'headline-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.015em', fontWeight: '600' }], 'headline-md': ['24px', { lineHeight: '32px', letterSpacing: '-0.01em', fontWeight: '600' }], 'headline-sm': ['20px', { lineHeight: '28px', fontWeight: '600' }], 'headline-xl': ['40px', { lineHeight: '48px', letterSpacing: '-0.02em', fontWeight: '700' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '500' }], 'headline-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.01em', fontWeight: '600' }], 'body-lg': ['17px', { lineHeight: '26px', fontWeight: '400' }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col font-body-md text-body-md"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 px-4 flex items-center justify-between"><div class="flex items-center gap-2"><button aria-label="Go back" class="w-11 h-11 -ml-1 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><img alt="MindBridge Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U93QmwmBtuNrEjYa5X7UPcKiSsGbfLpAAsKhlDD6l-gNAQq91MpJsvChLikzpHkgM2OP7cl6J1L7JooPwa7ODYNWkcsNnAihUy6_PTzojOlcRQw0ShLN8o_zq4FRMAB6CFl0WoIlnQ6V5DTFetZ1gubbWjGFY8ZSEnCBRAcOgoBoCqJzp9dCrCj93Xh-yoaU-65qwmBffE14pgQVnghgEuSJ1wdXBuHU3EO0OzY-KNYGG6kvptqvtFh-M"/><h1 class="font-title-md text-title-md text-on-surface truncate max-w-[150px]">Live Consultation Room</h1></div><div class="flex items-center gap-2"><a class="min-h-[44px] min-w-[44px] flex items-center justify-center" data-path="crisis-sos" href="#"><button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-tertiary text-on-tertiary shadow-[0_4px_14px_rgba(177,0,50,0.25)] hover:bg-tertiary-container transition-colors" type="button"><span class="material-symbols-outlined text-[17px]">e911_emergency</span><span class="font-label-md text-label-md font-semibold">SOS</span></button></a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ml-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsxdljH_DSKYyhmqWiQ0zdu8uN3scqi5kK1A-Rmuju-HPaVdDs94re6hffR2a0nc3I4-jcyuJvqssu5f894Oq7O8pxcmcnT_Q1dRCczMwCmzsi2e17QI-fxvNOus6dOBK-ybQU2IOUzQXCgMb9AOsdD3rWOUt0F-DWNGV8boPNYDMAWVbhwPXwvC6D4uN4t2jNor8wmTrngcR7BkJNbvj7U4k_6VrDbffAe2Sbp2yBk03_6axvMeqU"/></div></div></header><main class="flex-1 w-full bg-surface pt-16 flex flex-col pb-safe"><div class="flex flex-col w-full relative pb-8">
+<!-- Discreet Emergency Safety Banner -->
+<aside class="mx-4 mt-2 mb-3 bg-surface-container-high rounded-xl p-3 shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[17px]">shield_with_heart</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface truncate">
+        Feeling unsafe? Tap <span class="font-label-sm text-label-sm text-tertiary">SOS</span> for campus dispatch or 988 lifeline.
+      </p>
+</div>
+<button class="shrink-0 px-2.5 py-1 bg-surface-container-lowest text-tertiary rounded-full font-label-sm text-label-sm shadow-sm active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">call</span>
+<span>988</span>
+</button>
+</aside>
+<!-- Active Session Meta Bar -->
+<section class="px-4 mb-3 flex items-center justify-between">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Dr. Sarah Jenkins</h2>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">schedule</span>
+<span class="font-semibold text-primary" id="sessionTimer">28:45</span> remaining
+        </span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5 bg-surface-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px] text-secondary">lock</span>
+          256-bit Encrypted
+        </span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<!-- Quick Exit Discreet Button -->
+<button class="w-10 h-10 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center active:scale-95 transition-all shadow-sm" id="quickExitBtn" title="Quick Discreet Exit (Closes to blank notes)" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility_off</span>
+</button>
+<!-- End Session -->
+<button class="px-3.5 py-2 rounded-full bg-tertiary-fixed text-tertiary font-label-md text-label-md flex items-center gap-1 shadow-sm active:scale-95 transition-all" id="endSessionBtn" type="button">
+<span class="material-symbols-outlined text-[17px]">call_end</span>
+<span>End</span>
+</button>
+</div>
+</section>
+<!-- Dual Video Stage Area -->
+<section class="px-4 mb-4 relative">
+<div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-lg bg-surface-container-highest">
+<!-- Counselor Video Stream -->
+<img class="w-full h-full object-cover" data-alt="Warm empathetic female licensed mental health counselor in her early 40s smiling softly during a telehealth session. Natural ambient light filtering into an organic minimalist office with potted fiddle leaf fig and warm neutral clay tones. Professional, comforting, and authentic documentary-style therapy session aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi2-4aMbNPF5sGg35rA5okwuoDsjLQ6g3NArcjFg51vFQAE3FhJknZvdIho9oUFgaU1xXnoNz9ATiYdd2r2izFz_cpK-Z-00ymOBlj2bMT0aXxOkUPPOf-pcvxu9Jc875jeF6DMTBW5miYfjsyJoXN6Gn3g3ysigokzrR1q43A5v8xFUwU_gVs3VQHXQhhjD44XAm4RQldupRwthQgaccj5u4RWW8Q8NVCx5EKScfujUjx9g468vrS"/>
+<!-- Counselor Soft Gradient Scrim -->
+<div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-inverse-surface/70 via-inverse-surface/20 to-transparent pointer-events-none"></div>
+<!-- Live Status & Audio Waveform on Counselor stream -->
+<div class="absolute bottom-3 left-3 flex items-center gap-2 bg-inverse-surface/80 backdrop-blur-md px-3 py-1.5 rounded-full text-inverse-on-surface">
+<span class="font-label-md text-label-md font-medium">Dr. Jenkins</span>
+<!-- Dynamic Audio Wave Graphic -->
+<div class="flex items-center gap-0.5 h-3 ml-1">
+<span class="w-0.5 h-2 bg-primary-fixed rounded-full animate-bounce" style="animation-delay: 0.1s"></span>
+<span class="w-0.5 h-3.5 bg-primary-fixed rounded-full animate-bounce" style="animation-delay: 0.25s"></span>
+<span class="w-0.5 h-2.5 bg-primary-fixed rounded-full animate-bounce" style="animation-delay: 0.15s"></span>
+<span class="w-0.5 h-4 bg-primary-fixed rounded-full animate-bounce" style="animation-delay: 0.3s"></span>
+<span class="w-0.5 h-1.5 bg-primary-fixed rounded-full animate-bounce" style="animation-delay: 0.05s"></span>
+</div>
+</div>
+<!-- Counselor Connection Badge -->
+<div class="absolute top-3 left-3 bg-inverse-surface/60 backdrop-blur-md px-2.5 py-1 rounded-full text-inverse-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed">wifi</span>
+<span class="font-label-sm text-label-sm">HD 1080p</span>
+</div>
+<!-- Student PiP Window (Avatar Mode / Zero Anxiety) -->
+<div class="absolute top-3 right-3 w-32 aspect-[3/4] rounded-2xl overflow-hidden shadow-xl bg-surface-container p-2 flex flex-col justify-between cursor-pointer transition-transform duration-200 hover:scale-105" id="studentPip">
+<!-- Shield & Mode chip -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 bg-surface-container-lowest/90 px-1.5 py-0.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-primary">verified_user</span>
+<span class="font-label-sm text-[10px] text-on-surface">Protected</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<!-- Otter Avatar Graphic Illustration -->
+<div class="flex flex-col items-center justify-center py-1">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center shadow-inner relative overflow-hidden">
+<svg class="w-10 h-10 text-on-primary-fixed" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" fill="#a4f3ca" r="18"></circle>
+<!-- Otter Head & Whiskers -->
+<ellipse cx="24" cy="25" fill="#005236" rx="11" ry="10"></ellipse>
+<circle cx="16" cy="18" fill="#005236" r="3.5"></circle>
+<circle cx="32" cy="18" fill="#005236" r="3.5"></circle>
+<ellipse cx="24" cy="27" fill="#a4f3ca" rx="6" ry="4.5"></ellipse>
+<ellipse cx="24" cy="25.5" fill="#002113" rx="2" ry="1.2"></ellipse>
+<circle cx="20.5" cy="23" fill="#ffffff" r="1.5"></circle>
+<circle cx="27.5" cy="23" fill="#ffffff" r="1.5"></circle>
+<path d="M19 28C21 30 27 30 29 28" stroke="#005236" stroke-linecap="round" stroke-width="1.2"></path>
+</svg>
+<div class="absolute bottom-0 inset-x-0 h-3 bg-primary-container/20"></div>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface font-semibold mt-1 truncate max-w-full text-center">Gentle Otter #312</span>
+</div>
+<!-- Bottom Mode Info Tag -->
+<div class="bg-surface-container-lowest/95 rounded-lg py-1 px-1.5 text-center">
+<p class="font-label-sm text-[9px] text-on-surface-variant flex items-center justify-center gap-0.5">
+<span class="material-symbols-outlined text-[10px] text-secondary">videocam_off</span>
+            Camera Off
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive In-Call Drawer / Toolkit -->
+<section class="px-4 mb-4">
+<div class="bg-surface-container-lowest rounded-3xl p-4 shadow-sm flex flex-col gap-4">
+<!-- Interactive Breathing Sync Card -->
+<div class="bg-surface-container-low rounded-2xl p-3.5 flex flex-col gap-2 transition-all" id="breathingSyncContainer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[19px]">air</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Shared Regulation</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Synchronized with Dr. Jenkins</p>
+</div>
+</div>
+<button class="px-3.5 py-1.5 rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-sm active:scale-95 transition-all flex items-center gap-1" id="syncBreathBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Sync (4-4-4)</span>
+</button>
+</div>
+<!-- Breathing Sphere Interactive Visualizer (Hidden initially, expands on sync) -->
+<div class="hidden flex-col items-center justify-center py-3 bg-surface-container-lowest rounded-xl" id="breathAnimationBox">
+<div class="w-16 h-16 rounded-full bg-secondary-fixed-dim/60 flex items-center justify-center text-on-secondary-fixed font-label-sm text-label-sm transition-all duration-1000 ease-in-out" id="breathCircle">
+            Inhale
+          </div>
+<p class="font-body-sm text-body-sm text-secondary font-medium mt-2" id="breathPrompt">Breathe gently together...</p>
+</div>
+</div>
+<!-- Live Mood & Regulation Slider -->
+<div class="flex flex-col gap-2 bg-surface-container-low rounded-2xl p-3.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">sentiment_calm</span>
+<span class="font-label-lg text-label-lg text-on-surface">Right Now Feeling</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-semibold bg-surface-container-lowest px-2.5 py-0.5 rounded-full shadow-sm" id="moodLabel">Centered (6/10)</span>
+</div>
+<div class="flex items-center gap-3 pt-1">
+<span class="material-symbols-outlined text-[18px] text-outline">sentiment_dissatisfied</span>
+<input class="w-full h-2 bg-surface-variant rounded-full appearance-none cursor-pointer accent-primary focus:outline-none" id="moodSlider" max="10" min="1" type="range" value="6"/>
+<span class="material-symbols-outlined text-[18px] text-primary">sentiment_very_satisfied</span>
+</div>
+</div>
+<!-- Real-Time Shared Collaborative Session Notes -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">stylus_note</span>
+<label class="font-label-lg text-label-lg text-on-surface" for="sharedNotesInput">Private Session Scratchpad</label>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">check_circle</span>
+            Auto-saved
+          </span>
+</div>
+<div class="relative bg-surface-container-low rounded-2xl p-3">
+<textarea class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none resize-none" id="sharedNotesInput" placeholder="Jot safe anchor thoughts, grounding takeaways, or coping mechanisms discussed..." rows="2"></textarea>
+<div class="flex items-center justify-between mt-1 pt-2 border-t-0 text-outline">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[14px]">visibility_lock</span>
+              Visible only to you during call
+            </div>
+<button class="text-primary font-label-sm text-label-sm hover:underline active:scale-95 transition-transform" type="button">
+              Clear
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Tele-Consultation Control Dock -->
+<section class="px-4 mb-2">
+<div class="bg-surface-container-lowest rounded-3xl p-3 shadow-md flex items-center justify-between gap-1.5">
+<!-- Mic Mute Toggle -->
+<button class="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-2xl bg-surface-container-low hover:bg-surface-container active:scale-95 transition-all" id="micToggleBtn" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface mb-1">
+<span class="material-symbols-outlined text-[20px]" id="micIcon">mic</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface font-medium" id="micText">Mute</span>
+</button>
+<!-- Video Avatar / Cam Toggle -->
+<button class="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-2xl bg-secondary-fixed/50 hover:bg-secondary-fixed active:scale-95 transition-all" id="videoToggleBtn" type="button">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed mb-1">
+<span class="material-symbols-outlined text-[20px]" id="videoIcon">face</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-secondary-fixed font-semibold" id="videoText">Avatar</span>
+</button>
+<!-- Mode Switch (Voice Only / Text Chat) -->
+<button class="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-2xl bg-surface-container-low hover:bg-surface-container active:scale-95 transition-all" id="modeSwitchBtn" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface mb-1">
+<span class="material-symbols-outlined text-[20px]">chat_bubble_outline</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface font-medium">Chat Mode</span>
+</button>
+<!-- Share Screen / Resources -->
+<button class="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-2xl bg-surface-container-low hover:bg-surface-container active:scale-95 transition-all" id="shareDocBtn" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface mb-1">
+<span class="material-symbols-outlined text-[20px]">folder_open</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface font-medium">Resources</span>
+</button>
+<!-- Safe Disconnect -->
+<button class="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-2xl bg-error-container hover:bg-error-container/80 active:scale-95 transition-all" id="safeHangupBtn" type="button">
+<div class="w-10 h-10 rounded-full bg-error text-on-error flex items-center justify-center mb-1 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">call_end</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-error-container font-semibold">Leave</span>
+</button>
+</div>
+</section>
+<!-- Grounding Micro-Interaction Notification Toast -->
+<div class="mx-4 mt-1 bg-surface-container-high text-on-surface px-4 py-2.5 rounded-2xl shadow-sm text-center font-body-sm text-body-sm flex items-center justify-center gap-2 opacity-0 transition-opacity duration-300 pointer-events-none" id="toastMessage">
+<span class="material-symbols-outlined text-[18px] text-primary">spa</span>
+<span id="toastText">Take a slow breath. You are in control of this session.</span>
+</div>
+<!-- Discreet Cover Screen Modal (For Quick Exit) -->
+<div class="hidden fixed inset-0 z-50 bg-surface flex flex-col p-6 items-center justify-center text-center" id="quickExitModal">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-outline mb-4">
+<span class="material-symbols-outlined text-[32px]">menu_book</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Academic Study Schedule</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mb-6">MindBridge call paused in background mode. Your privacy is safe.</p>
+<button class="px-6 py-3 rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-md active:scale-95 transition-transform" id="resumeSessionBtn" type="button">
+      Resume Tele-Consultation
+    </button>
+</div>
+</div>
+<script>
+  // Simple interactive client-side logic for the tele-consultation room
+  (function() {
+    const timerEl = document.getElementById('sessionTimer');
+    const moodSlider = document.getElementById('moodSlider');
+    const moodLabel = document.getElementById('moodLabel');
+    const syncBreathBtn = document.getElementById('syncBreathBtn');
+    const breathAnimationBox = document.getElementById('breathAnimationBox');
+    const breathCircle = document.getElementById('breathCircle');
+    const breathPrompt = document.getElementById('breathPrompt');
+    const micToggleBtn = document.getElementById('micToggleBtn');
+    const micIcon = document.getElementById('micIcon');
+    const micText = document.getElementById('micText');
+    const videoToggleBtn = document.getElementById('videoToggleBtn');
+    const videoIcon = document.getElementById('videoIcon');
+    const videoText = document.getElementById('videoText');
+    const quickExitBtn = document.getElementById('quickExitBtn');
+    const quickExitModal = document.getElementById('quickExitModal');
+    const resumeSessionBtn = document.getElementById('resumeSessionBtn');
+    const toast = document.getElementById('toastMessage');
+    const toastText = document.getElementById('toastText');
+
+    // Countdown Timer logic
+    let remainingSeconds = 28 * 60 + 45;
+    setInterval(() => {
+      if (remainingSeconds > 0) {
+        remainingSeconds--;
+        const mins = Math.floor(remainingSeconds / 60);
+        const secs = remainingSeconds % 60;
+        if (timerEl) {
+          timerEl.textContent = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+      }
+    }, 1000);
+
+    // Mood slider dynamic rating text
+    const moodRatings = {
+      1: 'Overwhelmed (1/10)',
+      2: 'Anxious (2/10)',
+      3: 'Restless (3/10)',
+      4: 'Guarded (4/10)',
+      5: 'Neutral (5/10)',
+      6: 'Centered (6/10)',
+      7: 'Calm (7/10)',
+      8: 'Grounded (8/10)',
+      9: 'Refreshed (9/10)',
+      10: 'Empowered (10/10)'
+    };
+
+    if (moodSlider && moodLabel) {
+      moodSlider.addEventListener('input', (e) => {
+        const val = e.target.value;
+        moodLabel.textContent = moodRatings[val] || `${val}/10`;
+      });
+    }
+
+    // Breathing guide synchronous cadence
+    let breathingInterval = null;
+    let isBreathing = false;
+    if (syncBreathBtn && breathAnimationBox) {
+      syncBreathBtn.addEventListener('click', () => {
+        isBreathing = !isBreathing;
+        if (isBreathing) {
+          breathAnimationBox.classList.remove('hidden');
+          breathAnimationBox.classList.add('flex');
+          syncBreathBtn.classList.remove('bg-secondary');
+          syncBreathBtn.classList.add('bg-primary');
+          syncBreathBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">pause</span><span>Stop Sync</span>';
+          
+          let phase = 0; // 0: inhale, 1: hold, 2: exhale
+          const runCycle = () => {
+            if (phase === 0) {
+              breathCircle.style.transform = 'scale(1.35)';
+              breathCircle.textContent = 'Inhale';
+              breathPrompt.textContent = 'Inhale peace (4 seconds)...';
+              phase = 1;
+            } else if (phase === 1) {
+              breathCircle.textContent = 'Hold';
+              breathPrompt.textContent = 'Hold gently (4 seconds)...';
+              phase = 2;
+            } else {
+              breathCircle.style.transform = 'scale(1.0)';
+              breathCircle.textContent = 'Exhale';
+              breathPrompt.textContent = 'Release tension (4 seconds)...';
+              phase = 0;
+            }
+          };
+          runCycle();
+          breathingInterval = setInterval(runCycle, 4000);
+        } else {
+          clearInterval(breathingInterval);
+          breathAnimationBox.classList.add('hidden');
+          breathAnimationBox.classList.remove('flex');
+          syncBreathBtn.classList.remove('bg-primary');
+          syncBreathBtn.classList.add('bg-secondary');
+          syncBreathBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">sync</span><span>Sync (4-4-4)</span>';
+        }
+      });
+    }
+
+    // Microphone toggle
+    let isMuted = false;
+    if (micToggleBtn) {
+      micToggleBtn.addEventListener('click', () => {
+        isMuted = !isMuted;
+        if (isMuted) {
+          micIcon.textContent = 'mic_off';
+          micIcon.classList.add('text-error');
+          micText.textContent = 'Unmute';
+          showToast('Microphone is now muted.');
+        } else {
+          micIcon.textContent = 'mic';
+          micIcon.classList.remove('text-error');
+          micText.textContent = 'Mute';
+          showToast('Microphone is live.');
+        }
+      });
+    }
+
+    // Video / Avatar mode cycle
+    let isAvatar = true;
+    if (videoToggleBtn) {
+      videoToggleBtn.addEventListener('click', () => {
+        isAvatar = !isAvatar;
+        if (isAvatar) {
+          videoIcon.textContent = 'face';
+          videoText.textContent = 'Avatar';
+          showToast('Switched to Gentle Otter Avatar protection.');
+        } else {
+          videoIcon.textContent = 'videocam';
+          videoText.textContent = 'Camera';
+          showToast('Webcam turned on with soft blur enabled.');
+        }
+      });
+    }
+
+    // Discreet Quick Exit Mode
+    if (quickExitBtn && quickExitModal && resumeSessionBtn) {
+      quickExitBtn.addEventListener('click', () => {
+        quickExitModal.classList.remove('hidden');
+      });
+      resumeSessionBtn.addEventListener('click', () => {
+        quickExitModal.classList.add('hidden');
+      });
+    }
+
+    // Helper toast notification
+    function showToast(text) {
+      if (!toast) return;
+      toastText.textContent = text;
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 2500);
+    }
+  })();
+</script></main></body></html>

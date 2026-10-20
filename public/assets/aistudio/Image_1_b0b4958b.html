@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_THREEJS_START:ANIMATION_1 class="fixed inset-0 w-full h-full bg-transparent" -->
+<div class="fixed inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_1" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_1');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  # MindBridge: Comprehensive Technical Architecture & Implementation Blueprint
+
+**Platform:** MindBridge – College Student Mental Wellness & Peer-to-Professional Consultation  
+**Engineering Team:** Deshna, Ayush, Shravani, Sunil  
+**Target Architecture:** WordPress Headless / Hybrid CMS + WebRTC Engine + HIPAA/GDPR-compliant Data Vault  
+**Primary Interface Focus:** Mobile-First Frictionless Student Journey & Counselor Portal  
+
+---
+
+## 1. Executive Architecture Overview
+
+MindBridge bridges the critical mental health support gap on university campuses by connecting college students with certified mental health consultants and peer counselors under strict anonymity, institutional compliance, and flexible tiered monetization.
+
+### System Stack Overview
+| Layer | Recommended Technology / Tools | Strategic Purpose |
+| :--- | :--- | :--- |
+| **CMS Core / Host** | WordPress Engine on PHP 8.2+ / Isolated VPC (AWS Lightsail or Kinsta) | Rapid editorial control, student resource library, established role management, headless REST/GraphQL endpoints |
+| **Authentication & IAM** | OpenID Connect / SAML (Shibboleth / InCommon) + Firebase / Supabase Auth | Seamless university Single Sign-On (.edu email verification), strict pseudonymization (student identity never linked directly to therapy records) |
+| **Real-time Comms** | Agora.io or Daily.co WebRTC SDK (Embedded Custom Client) | End-to-end encrypted 3-mode consultation: Anonymous Real-Time Chat, Low-bandwidth Voice Calls, and HD Secure Video |
+| **Scheduling Engine** | Amelia Enterprise or Bookly Pro + Custom REST Integration | Dual-timezone scheduling, buffer times, instant matching, synchronized calendar feeds |
+| **Billing & Monetization** | WooCommerce + WooCommerce Subscriptions + Stripe Connect / Razorpay | Handles Free 1st chat voucher, Pay-Per-Session escrow, Tiered Student Subscriptions, and University B2B voucher codes |
+| **Data Protection & Vault** | MariaDB with Transparent Data Encryption (TDE) + AWS S3 Encrypted Buckets (SSE-KMS) | Zero-knowledge session logs, automated data purging, HIPAA & FERPA audit readiness |
+
+---
+
+## 2. Requirement Mapping & Component Breakdown
+
+### A. Dual-Role Architecture & User Permissions
+MindBridge requires strict role separation:
+1. **Student (`role_student`):**
+   * *Profile Data:* Pseudo-handle/Avatar (e.g., "QuietPanda#402"), verified university domain (`@campus.edu`), encrypted mood logs. Real names and phone numbers are isolated from the counselor directory.
+   * *Capabilities:* Book sessions, access emergency SOS distress hotlines, join triage chats, view subscription tokens, redeem institutional access codes.
+2. **Consultant / Therapist (`role_counselor`):**
+   * *Profile Data:* Verified credentials, licensing state/body, specialty badges (Anxiety, Exam Stress, ADHD, Relationship Grief), rate card, calendar availability.
+   * *Capabilities:* Accept bookings, launch WebRTC consultation room, maintain private encrypted clinical session notes, withdraw earnings.
+3. **University Administrator (`role_institution_admin`):**
+   * *Capabilities:* Manage student license seat allocation, aggregate anonymized wellness pulse metrics (no individual student consultation tracking).
+
+### B. Three Modes of Support (Chat, Voice, Video)
+* **Mode 1: Anonymous Real-time Chat**
+  * Built using WebSocket-powered chat (Socket.io or Agora Chat SDK) with automated risk keyword detection (e.g., alert trigger on self-harm lexicons routing to crisis helpline 988).
+* **Mode 2 & 3: Encrypted Voice & HD Video**
+  * Integrated via Daily.co or Agora pre-built React/Web Component embedded within an authenticated WordPress template. No phone numbers or IP addresses exposed.
+
+### C. Multi-Stream Monetization Flow
+1. **Free First Chat:** Auto-granted 15-minute trial voucher upon verified university student registration.
+2. **Pay-Per-Session:** Instant checkout powered by Stripe Elements / Razorpay with automated escrow hold until session completion.
+3. **Monthly Subscriptions:** Recurring student plans (e.g., 2 sessions/month + unlimited peer distress chat).
+4. **Institutional B2B Licensing:** Campus-wide access code validation matching student `.edu` email domains against campus contract database.
+
+---
+
+## 3. Database Relationships & Security Protocols
+
+### Pseudonymization Architecture
+```
+[University SSO / Identity Provider]
+          │
+          ▼
+   [Auth Gateway] ── (Stores email, salt, hash)
+          │
+    UUID Tokens Only
+          │
+          ▼
+ [MindBridge Core Database]
+   ├── wp_users (display_name: "BlueJay92", role: "student")
+   ├── mb_consultations (student_uuid, counselor_id, timestamp, status)
+   └── mb_clinical_notes (AES-256 encrypted using counselor's public key)
+```
+* **FERPA & HIPAA Alignment:** Chat histories are auto-expunged every 30 days unless flagged for safety audits. Clinical case notes are encrypted client-side or at rest using envelope encryption (AWS KMS).
+
+---
+
+## 4. Step-by-Step Implementation Action Plan
+
+### Phase 1: Core Environment & Secure Foundation
+1. Deploy WordPress on an isolated hardened stack (Nginx, PHP 8.2, HTTPS enforced with HSTS).
+2. Install security hardening: disable XML-RPC, enforce 2FA for counselors and admins, restrict `/wp-json/wp/v2/users` user enumeration.
+3. Configure Object Caching (Redis) for low latency.
+
+### Phase 2: Role Management & Custom User Meta
+1. Implement custom roles using a custom MU-Plugin (`mindbridge-core.php`).
+2. Build custom onboarding flows for students that generate random anonymous usernames and playful avatar selections to minimize initial stigma.
+
+### Phase 3: Booking & WebRTC Consultation Engine
+1. Configure Amelia / Bookly API with custom webhooks connected to Daily.co room creation.
+2. Automate room token generation: rooms only activate 5 minutes before scheduled session and destroy 10 minutes post-session.
+
+### Phase 4: Stigma-Free Mobile Interface & SOS Failsafe
+1. Implement a warm, high-contrast, anxiety-reducing mobile design (gentle sage greens, lavender, rounded cards, calming micro-interactions).
+2. Persistent "Quick Exit" / SOS Panic Button pinned to top navigation for immediate crisis intervention and rapid privacy toggles.
+
+---
+
+## 5. Production Code Snippets & Configurations
+
+### Snippet 1: Core MU-Plugin Role & Anonymity Engine (`mindbridge-roles.php`)
+```php
+<?php
+/**
+ * Plugin Name: MindBridge Core Security & Roles
+ * Description: Implements student & consultant roles with strict identity protection.
+ */
+
+if (!defined('ABSPATH')) exit;
+
+// Register dedicated MindBridge Roles
+function mb_register_custom_roles() {
+    add_role('role_student', 'Student', [
+        'read' => true,
+        'book_consultations' => true,
+        'access_student_lounge' => true
+    ]);
+
+    add_role('role_counselor', 'Consultant', [
+        'read' => true,
+        'view_assigned_sessions' => true,
+        'edit_clinical_notes' => true
+    ]);
+}
+add_action('init', 'mb_register_custom_roles');
+
+// Force Anonymous Display Name for Students upon Registration
+function mb_anonymize_student_account($user_id) {
+    $user = get_userdata($user_id);
+    if (in_array('role_student', (array) $user->roles)) {
+        $adjectives = ['Calm', 'Mindful', 'Resilient', 'Gentle', 'Brave', 'Steady'];
+        $animals = ['Otter', 'Panda', 'Sparrow', 'Koala', 'Fox', 'Hawk'];
+        $alias = $adjectives[array_rand($adjectives)] . ' ' . $animals[array_rand($animals)] . '_' . wp_rand(100, 999);
+        
+        wp_update_user([
+            'ID' => $user_id,
+            'display_name' => $alias,
+            'nickname' => $alias
+        ]);
+        update_user_meta($user_id, 'is_identity_masked', 1);
+    }
+}
+add_action('user_register', 'mb_anonymize_student_account');
+```
+
+### Snippet 2: Daily.co Room Generator Webhook Integration (`mindbridge-telehealth.php`)
+```php
+<?php
+// Function to generate a secure, temporary consultation room
+function mb_generate_consultation_room($booking_id, $duration_minutes = 45) {
+    $daily_api_key = defined('DAILY_API_KEY') ? DAILY_API_KEY : '';
+    $exp_timestamp = time() + (($duration_minutes + 15) * 60);
+
+    $response = wp_remote_post('https://api.daily.co/v1/rooms', [
+        'headers' => [
+            'Authorization' => 'Bearer ' . $daily_api_key,
+            'Content-Type' => 'application/json'
+        ],
+        'body' => json_encode([
+            'properties' => [
+                'exp' => $exp_timestamp,
+                'enable_chat' => true,
+                'enable_screenshare' => false,
+                'eject_at_room_exp' => true
+            ]
+        ])
+    ]);
+
+    if (is_wp_error($response)) return false;
+
+    $data = json_decode(wp_remote_retrieve_body($response), true);
+    return $data['url'] ?? null;
+}
+```
+
+### Snippet 3: Client-Side Emergency Quick-Exit & Panic Mask Script
+```javascript
+// Emergency Quick Exit: Disguises screen to academic research / clears local state
+document.addEventListener('DOMContentLoaded', () => {
+  const quickExitBtn = document.getElementById('mb-quick-exit');
+  if (quickExitBtn) {
+    quickExitBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      // Replace window location instantly with harmless Google Scholar / Wikipedia
+      window.location.replace('https://scholar.google.com');
+    });
+  }
+});
+```
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_1 -->
+</body>
+</html>

@@ -1,0 +1,227 @@
+---
+name: MindBridge
+colors:
+  surface: '#f9f9ff'
+  surface-dim: '#cfdaf2'
+  surface-bright: '#f9f9ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f0f3ff'
+  surface-container: '#e7eeff'
+  surface-container-high: '#dee8ff'
+  surface-container-highest: '#d8e3fb'
+  on-surface: '#111c2d'
+  on-surface-variant: '#3f4943'
+  inverse-surface: '#263143'
+  inverse-on-surface: '#ecf1ff'
+  outline: '#6f7a72'
+  outline-variant: '#bec9c1'
+  surface-tint: '#176b4b'
+  primary: '#096444'
+  on-primary: '#ffffff'
+  primary-container: '#2e7d5b'
+  on-primary-container: '#d0ffe3'
+  inverse-primary: '#88d6af'
+  secondary: '#665397'
+  on-secondary: '#ffffff'
+  secondary-container: '#c8b3ff'
+  on-secondary-container: '#544184'
+  tertiary: '#b10032'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#db1644'
+  on-tertiary-container: '#fff1f1'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#a4f3ca'
+  primary-fixed-dim: '#88d6af'
+  on-primary-fixed: '#002113'
+  on-primary-fixed-variant: '#005236'
+  secondary-fixed: '#e9ddff'
+  secondary-fixed-dim: '#cfbcff'
+  on-secondary-fixed: '#210a50'
+  on-secondary-fixed-variant: '#4d3b7e'
+  tertiary-fixed: '#ffdada'
+  tertiary-fixed-dim: '#ffb3b6'
+  on-tertiary-fixed: '#40000c'
+  on-tertiary-fixed-variant: '#920028'
+  background: '#f9f9ff'
+  on-background: '#111c2d'
+  surface-variant: '#d8e3fb'
+typography:
+  headline-xl:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: 48px
+    letterSpacing: -0.02em
+  headline-xl-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 30px
+    fontWeight: '700'
+    lineHeight: 38px
+    letterSpacing: -0.015em
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 40px
+    letterSpacing: -0.015em
+  headline-lg-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 26px
+    fontWeight: '600'
+    lineHeight: 34px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 28px
+  title-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '500'
+    lineHeight: 26px
+  body-lg:
+    fontFamily: Inter
+    fontSize: 17px
+    fontWeight: '400'
+    lineHeight: 26px
+  body-md:
+    fontFamily: Inter
+    fontSize: 15px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 20px
+  label-lg:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 20px
+    letterSpacing: 0.01em
+  label-md:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: 16px
+    letterSpacing: 0.02em
+  label-sm:
+    fontFamily: Inter
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 14px
+    letterSpacing: 0.03em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  margin: 1.5rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+The design system establishes a sanctuary-like digital environment engineered specifically for university students navigating stress, vulnerability, and academic pressure, while offering certified counselors an orderly, focused clinical workstation. 
+
+### Brand Character & Emotional Resonance
+- **Sanctuary & Safety:** Interaction patterns eliminate anxiety through predictable layouts, transparent data disclosures, and zero sudden layout shifts.
+- **Warm Authority:** Balances institutional, clinical credibility with human-centered empathy, steering clear of cold hospital tropes and overly casual consumer tropes.
+- **De-Stigmatization & Agency:** Interfaces celebrate privacy and user empowerment, elevating anonymity controls and calm reassurance at every decision point.
+
+### Design Style: Soft Modern & Tactile Reassurance
+The visual system blends **modern clinical clarity** with **tactile softness**. Surfaces rely on organic off-whites, botanical tones, delicate container borders, and airy spacing. Hard 90-degree corners and high-contrast brutalist outlines are entirely eliminated in favor of generous radii (16px to 24px) and soft, low-luminance ambient drops that mimic natural daylight falling on matte paper.
+
+## Colors
+
+The color palette prioritizes autonomic nervous system grounding through botanical greens, soothing lavenders, and glare-free warm neutrals.
+
+### Palette Architecture
+- **Primary — Deep Botanical Sage (`#2E7D5B`):** Represents grounded stability, natural renewal, and clinical reassurance. Paired with soft tint backgrounds (`#EBF5F0`) for supportive cards and selected states.
+- **Secondary — Empathetic Lavender (`#7C69AF`):** Softens cognitive fatigue; applied across reflective check-ins, meditation exercises, and active consultation modes. Tint container is set to `#F3EFFF`.
+- **Neutral — Slate Charcoal (`#1E293B`):** Retains high-contrast legibility for micro-typography, legal notices, and clinical notes without the harshness of pure black. Paired with muted slate (`#64748B`) for helper texts.
+- **Background Canvas — Warm Parchment (`#FAFAF9`):** A soft, eye-resting matte ground that avoids digital glare across long nocturnal reading and journaling sessions.
+- **Tertiary / Utility — Emergency SOS Coral (`#E11D48`):** Reserved exclusively for urgent crisis interventions, hotlines, and critical escalation triggers. Never used for standard destructive interface actions like "Delete note".
+
+## Typography
+
+The typography couples the welcoming, open aperture geometry of **Plus Jakarta Sans** for headers with the systematic, neutral legibility of **Inter** for all prose, notes, and session documentation.
+
+### Hierarchy & Legibility Rules
+- **Display & Section Headers:** Plus Jakarta Sans provides a friendly, human, non-clinical greeting. Headings maintain balanced letter-spacing to prevent aggressive optical density.
+- **Body & Clinical Transcripts:** Inter guarantees high reading speed and zero visual ambiguity across varied digital screens, even at low brightness settings.
+- **Anonymity Badges & Metadata:** Set in `label-sm` and `label-md` using medium-to-semibold weights with subtle tracking to provide effortless identification of counselor credentials and session states.
+
+## Layout & Spacing
+
+The layout model is built on an intentional 8pt spatial grid with generous breathing room to counteract cognitive overload during moments of acute stress.
+
+### Grid & Breakpoints
+- **Mobile (< 768px):** 4-column fluid layout with `margin: 1rem` and `gutter: 1rem`. Bottom sheets and unified single-column cards dominate the workspace.
+- **Tablet (768px - 1024px):** 8-column layout with `margin: 1.5rem` and `gutter: 1.5rem`. Split views support concurrent tele-consultation video and self-reflection notes.
+- **Desktop (> 1024px):** 12-column layout capped at a maximum content constraint of `1280px` centered on canvas. Sidebar navigation is static and unobtrusive.
+
+### Spacing Philosophy
+- Maintain a minimum of `space-xl` (`2.5rem`) between disparate functional modules to prevent visual clutter.
+- Cards encapsulate related interactive blocks with `space-lg` (`1.5rem`) internal padding.
+
+## Elevation & Depth
+
+Visual hierarchy rejects stark drop-shadows and dark outlines. Elevation uses light, colored ambient diffusion combined with tonal background tiers.
+
+### Depth System
+- **Level 0 (Base Canvas):** Warm Parchment (`#FAFAF9`).
+- **Level 1 (Default Containers & Feed Cards):** Pure White (`#FFFFFF`) with a 1px composite border (`rgba(30, 41, 59, 0.06)`) and an ultra-soft botanical ambient shadow: `0 4px 20px -2px rgba(46, 125, 91, 0.05)`.
+- **Level 2 (Active Cards, Tele-consultation Drawers, Floating Controls):** Pure White (`#FFFFFF`) supported by `0 12px 32px -4px rgba(30, 41, 59, 0.08)`.
+- **Level 3 (Crisis Popovers & Emergency Drawers):** High-priority focus layered above a tinted backdrop overlay (`rgba(30, 41, 59, 0.4)` with `backdrop-filter: blur(8px)`) using a gentle coral ambient halo: `0 20px 40px -8px rgba(225, 29, 72, 0.12)`.
+
+## Shapes
+
+The design uses a generous curved corner language (`roundedness: 2`) that conveys warmth, safety, and physical gentleness.
+
+### Curvature Tokens
+- **Base Components (Inputs, Small Badges, Chips):** `0.5rem` (8px) to `0.75rem` (12px) for sharp interaction targets.
+- **Cards & Primary Modules:** `1rem` (16px) for content items; `1.5rem` (24px) for hero containers, counselor spotlight profile cards, and video consultation viewports.
+- **Pills & Status Containers:** Fully rounded (`9999px`) for counselor availability indicators, modal triggers, and anonymity shields.
+
+## Components
+
+### Buttons
+- **Primary:** Background `#2E7D5B`, text `#FFFFFF`, border-radius `9999px` (pill), height `48px`, font `label-lg`. Hover shifts to `#246549` with a subtle elevation lift.
+- **Secondary / Supportive:** Background `#F3EFFF`, text `#7C69AF`, border-radius `9999px`.
+- **SOS Emergency:** Background `#E11D48`, text `#FFFFFF`, border-radius `9999px`. Prominent, unmistakable, and permanently accessible in student navigation bars.
+
+### Input Fields & Reflection Prompts
+- Background `#FFFFFF` encased in a 1px border (`#E2E8F0`). Height `52px` with `16px` horizontal padding. Focus state switches border to `#2E7D5B` accompanied by a `0 0 0 3px #EBF5F0` glow. Placeholder text in `#94A3B8`.
+
+### Checkboxes & Radio Selectors
+- Softly rounded checks (`6px`) and circular radios (`50%`). In active states, filled with `#2E7D5B` showing a white checkmark or center pip. Never use high-contrast angular markers.
+
+### Status Badges & Specialized System Indicators
+- **Counselor Availability Badge:** Fully rounded pill containing a 6px status dot.
+  - *Available Now:* Background `#EBF5F0`, text `#2E7D5B`, dot `#2E7D5B`.
+  - *In Session:* Background `#FFF7ED`, text `#C2410C`, dot `#EA580C`.
+- **Mode Indicators (Chat, Voice, Video):** Subtle segmented buttons or chips framed with `8px` radius. Active mode is indicated with Lavender fill (`#F3EFFF`) and `#7C69AF` icon/typography.
+- **Anonymity Shield:** A distinct component combining a shield icon and customizable pseudonym tag. Rendered on `#F1F5F9` background with `#475569` text, giving students absolute clarity on when identity obfuscation is active.
+
+### Cards
+- Counselor profile cards, session bookings, and journaling prompts sit on pure white containers with `16px` or `24px` radii. Dividers between session notes use delicate borders (`rgba(30, 41, 59, 0.05)`).
